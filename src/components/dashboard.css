@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Tilt+Neon&display=swap');
+
+:root{
+    --bg-light-primary: white;
+    --bg-light-secondary: rgb(246, 251, 255);
+    --color-light-primary: black;
+    --card-shadow-light:rgb(188, 188, 188);
+    --color-light-secondary:rgb(68, 68, 68);
+
+    --bg-dark-primary: black;
+    --bg-dark-secondary: rgb(22, 0, 56);
+    --color-dark-primary: white;
+    --card-shadow-dark:rgb(79, 79, 79);
+    --color-dark-secondary:rgb(188, 188, 188);
+
+    --color-neutral:rgb(167, 39, 39);
+    --font-poppins: 'Poppins', sans-serif;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.card{
+    box-shadow: 0 2rem 3rem var(--card-shadow-light);
+    padding: 1rem;
+    border-radius: 2rem;
+    transition: 350ms ease-in 0s;
+    cursor: pointer;
+    background-color:var(--bg-light-primary) ;
+
+}
+.card:hover{
+    box-shadow: none;
+}
+
+/*****************************Side bar************************/
+
+.side_bar_container{
+
+    width: 20vw;
+    margin-left:1.5rem;
+    height: 100vh;
+    font-family: var(--font-poppins);
+}
+.side_bar_container .toggle{
+    display: flex;
+}
+
+.side_bar_container .logo{
+    display: flex;
+    flex-direction: row;
+    font-size: 0.80rem;
+    padding: 0.6rem;
+
+}
+
+.logo img{
+    width: 3rem!important;
+    height: 3rem;
+    margin:.7em auto .3em;
+    display: block;
+    text-align: center;
+    padding: 4%  0%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.logo h2{
+    text-align: center;
+    letter-spacing: -1px;
+    line-height: normal;
+    margin-top: 1.5rem;
+    margin-left: 0.5rem;
+}
+.logo h2 span{
+    color: var(--color-neutral);
+}
+
+.btn_close{
+    display: none;
+}
+
+.side_bar_list_container{
+    height: 80vh;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+.side_bar_item{
+    list-style: none;
+    font-size: 1.3rem;
+    position: relative;
+}
+.side_bar_item a{
+    text-decoration: none;
+    color: var(--color-light-secondary);
+    position: relative;
+    top:1.5rem;
+    display: flex;
+    gap:1rem;
+    height: 3.7rem;
+    margin-left: 1.2rem;
+    font-size: 1rem;
+    width: 100%;
+    transition: margin-left 550ms ease-in-out 0s;
+}
+.side_bar_item li{
+    background-color: var(--bg-light-primary);
+}
+.side_bar_item a:hover{
+    margin-left: 2.7rem;
+}
+
+.side_bar_item a:active{
+    width:100%;
+    color: var(--color-light-primary);
+    background-color: var(--bg-light-secondary);
+    margin-left: 0;
+}
+.side_bar_list_container ul li:last-child{
+    position: absolute;
+    bottom: 2rem;
+}
+
+
+/*****************************************/
+
+
+#progress_card_container{
+    display: flex;
+    justify-content: space-around;
+}
+.progress_card{
+    flex:1;
+    margin: 1rem 1rem;
+    display: flex;
+    gap:1rem;
+}
+.progress_card_title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.progress_card svg{
+    width: 7rem;
+    height:7rem;
+}
+.progress{
+    position: relative;
+}
+
+
+.progress_card svg circle{
+    fill:none;
+    stroke-width:10;
+    stroke-linecap: round;
+    stroke: rgb(53, 164, 53);
+    stroke-dashoffset: -30;
+    stroke-dasharray: 200;
+    transform: translate(1rem,1rem);
+}
+
+.progress #percentage{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-70%);
+}
+
+#progress_card_main #dash_title{
+    margin-top: 1.5rem;
+    margin-left: 1.5rem;
+}
+
+
+/*************************Admin***************************/
+.admin_card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.admin_container{
+    display: flex;
+    gap: 1rem;
+}
+
+.admin_card .login_status{
+    color: grey;
+}
+.admin_card img{
+    width: 7rem!important;
+    height: 7rem;
+    margin:.7em auto .3em;
+    text-align: center;
+    border-radius: 50%;
+    object-fit: cover;
+}
